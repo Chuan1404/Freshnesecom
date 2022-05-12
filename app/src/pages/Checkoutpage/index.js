@@ -76,7 +76,7 @@ export default function Checkoutpage() {
             ref,
             () => {
                 return {
-                    handleSubmit,
+                    handleSubmit: () => handleSubmit(['text']),
                     form
                 }
             },

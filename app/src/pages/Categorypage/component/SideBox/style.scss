@@ -1,0 +1,22 @@
+.sideBox{
+    margin-bottom: 48px;
+    h2{
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+    }
+    span{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &_list{
+        &-text,&-check, &-rate{
+            display: flex;
+            padding: 6px 0;
+        }
+        &-text{
+            cursor: pointer;
+            justify-content: space-between;
+        }
+    }
+}

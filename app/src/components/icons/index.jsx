@@ -79,4 +79,32 @@ function Plus({color = '#151515'}) {
 
     )
 }
-export { Arrow, Buy, Search, User, Compare,Close,Heart , Star, Plus};
+function Check({color = '#FDFDFD'}){
+    return(
+        <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke={color} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+function List_horizontal({color = '#A9A9A9', ...rest}) {
+    return(
+        <svg onClick={rest.onClick} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.333 1.33331H2.66634C1.92996 1.33331 1.33301 1.93027 1.33301 2.66665V13.3333C1.33301 14.0697 1.92996 14.6666 2.66634 14.6666H13.333C14.0694 14.6666 14.6663 14.0697 14.6663 13.3333V2.66665C14.6663 1.93027 14.0694 1.33331 13.333 1.33331Z" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.33301 4.66663H14.6663" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.33301 8H14.6663" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.33301 11.3333H14.6663" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+
+}
+function List_vertical({color = '#A9A9A9', ...rest}){
+    return(
+        <svg onClick={rest.onClick} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.333 1.33331H2.66634C1.92996 1.33331 1.33301 1.93026 1.33301 2.66664V13.3333C1.33301 14.0697 1.92996 14.6666 2.66634 14.6666H13.333C14.0694 14.6666 14.6663 14.0697 14.6663 13.3333V2.66664C14.6663 1.93026 14.0694 1.33331 13.333 1.33331Z" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.33301 7.99999H14.6663" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 1.33331V14.6666" stroke={color} stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+export { Arrow, Buy, Search, User, Compare, Close, Heart , Star, Plus, Check, List_horizontal, List_vertical};

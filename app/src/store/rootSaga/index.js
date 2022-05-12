@@ -9,7 +9,7 @@ function* fetchLogin(action) {
          yield put({type: GET_PROFILE})
     }
     catch(e) {
-
+        alert('err')
     }
 }
 function* getProfile(){

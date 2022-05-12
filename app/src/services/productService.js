@@ -1,8 +1,8 @@
 import { API } from "../constant";
 
 const productService = {
-    getProduct() {
-        return fetch(`${API}/product`).then(res => res.json())
+    getProduct(query = '') {
+        return fetch(`${API}/product${query}`).then(res => res.json())
     }
 }
 

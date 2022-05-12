@@ -21,22 +21,26 @@ export const useForm = (initValue) => {
             [name]: value 
         })
     }
-    const validate = () => {
+    const validate = (noRequiredList = []) => {
         let ob = {};
         Object.keys(form).map(name => {
-            if(!form[name].trim()) ob[name] = 'không được để trống'
-            else if (regex[name] && !regex[name].test(form[name])) ob[name] = 'Sai định dạng' 
+            if(!noRequiredList.includes(name)) {
+                if(!form[name].trim()) ob[name] = 'không được để trống'
+                else if (regex[name] && !regex[name].test(form[name])) ob[name] = 'Sai định dạng' 
+            }
         })
         setError(ob);
         return ob;
     }
-    const handleSubmit = () => {
-        let ob = validate();
+    const handleSubmit = (noRequiredList = []) => {
+        let ob = validate(noRequiredList);
+        console.log(ob)
         if (Object.keys(ob).length == 0) {
+            alert('ok')
         } 
 
     }
-    const register = (name , option = {mustNumber : false,isCheckbox: false}) => {
+    const register = (name , option = {mustNumber : false,isCheckbox: false, required: true}) => {
         return {
             name,
             value: form[name],

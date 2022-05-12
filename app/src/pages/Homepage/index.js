@@ -4,10 +4,12 @@ import {useSelector} from 'react-redux'
 import { Navigate } from 'react-router-dom';
 import { TOKEN } from '../../constant';
 import { ProductList } from '../../components';
+import useQuery from '../../hooks/useQuery';
+import productService from '../../services/productService';
+
 export default function HomePage() {
     const token = JSON.parse(localStorage.getItem(TOKEN));
-    const {product} = useSelector(store => store.product)
-    console.log(product)
+
     if(!token) return <Navigate to='/login' />
 
     const list1 = [
@@ -80,8 +82,8 @@ export default function HomePage() {
     return (
         <div className='home'>
             <CategoryMenu list={list1}/>
-            <BestSelling list={list2} productList={[product[0],product[1],product[2]]}/>
-            <BestSelling list={list3} productList={[product[3],product[4],product[5]]} title = 'Best from Framers' />
+            <BestSelling list={list2} />
+            <BestSelling list={list3} title = 'Best from Framers' />
             <CustomerQuotes />
             <ProductList />
             <BlogPosts />

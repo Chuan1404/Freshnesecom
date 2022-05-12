@@ -63,8 +63,10 @@
         &.size {
             &-middle {
                 height: 42px;
+                width: 100%;
             }
             &-large {
+                width: 100%;
                 height: 112px;
             }
         }

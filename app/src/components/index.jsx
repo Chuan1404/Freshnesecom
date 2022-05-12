@@ -17,6 +17,7 @@ import Accordion from './Accordion';
 import ProductCard from './ProductCard';
 import ShoppingCard from './ShoppingCard';
 import NavSide from './NavSide';
+import InputRange from './InputRange';
 import { ProductList } from './ProductList';
 
 export {
@@ -39,5 +40,6 @@ export {
     ProductCard,
     ShoppingCard,
     NavSide,
-    ProductList
+    ProductList,
+    InputRange
 };

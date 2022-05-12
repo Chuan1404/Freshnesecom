@@ -1,0 +1,19 @@
+@import '../../../../assets/css/style.scss';
+.filterCheck{
+    &_tag {
+        border: 1.5px solid #EBEBEB;
+        border-radius: 12px;
+        padding: 0px 8px;
+        margin-left: 8px;
+        span{
+            font-weight: 600;
+        }
+    }
+    &_select{
+        background: transparent;
+        font-weight: 600;
+        margin-left: 24px;
+        padding-left: 24px;
+        border-left: 1px solid $blurColor;
+    }
+}

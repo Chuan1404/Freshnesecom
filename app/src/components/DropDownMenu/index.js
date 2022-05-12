@@ -4,9 +4,9 @@ import './style.scss'
 
 export default function DropDownMenu({background = "#F9F9F9" , color = "#151515"}) {
     return (
-        <div className="dropDownMenu">
+        <div className="dropDownMenu" style={{backgroundColor: background}}>
             <div className="container">
-                <ul className= "menu" style={{backgroundColor: background}}>
+                <ul className= "menu" >
                     <Title myTitle="bakery" color={color}/>
                     <Title myTitle="Fruit and vegetables" color={color}/>
                     <Title myTitle="Meat and fish" color={color}/>

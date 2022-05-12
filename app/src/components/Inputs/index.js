@@ -6,7 +6,6 @@ export default function Inputs({label = '', type='text', placehoder, icon, url =
         <div className="inputs ">
             <label className='textStyle'>{label}</label>
             <div className={classnames("inputs_input","inputStyle",`icon-${icon}`,`type-${type}`,`size-${size}`)}>
-
                 {
                     type == 'textarea' && <textarea {...rest} placeholder={placehoder} /> ||
                     type == 'checkbox' && <><input {...rest} type={type} /><span>{placehoder}</span></> ||

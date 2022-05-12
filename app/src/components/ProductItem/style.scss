@@ -46,6 +46,9 @@
         }
         @include flex(space-between , center);
     }
+    &_rate{
+        margin-top: 10px;
+    }
     &:hover {
         box-shadow: 0px 0px 1px 1px #ddd;
         .productItem_img {

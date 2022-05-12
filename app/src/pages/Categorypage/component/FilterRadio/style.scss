@@ -1,0 +1,37 @@
+@import '../../../../assets/css/style.scss';
+.filterRadio {
+    li {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        user-select: none;
+        &:last-child{
+            margin-right: 0;
+        }
+        input{
+            appearance: none;
+            margin-right: 10px;
+            border: 1.5px solid $blurColor;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            &:checked{
+                background-color: $primaryColor;
+                border-color: transparent;
+                &::after{
+                    display: block;
+                }
+            }
+            &::after{
+                content: '';
+                display: none;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border-radius: 50%;
+                @include position(50%,50%,-50%,-50%);
+            }
+        }
+    }
+}

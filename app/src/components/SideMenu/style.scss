@@ -12,10 +12,15 @@
     &_list {
         margin-bottom: auto;
         li {
+            @include flex(space-between,center);
             a {
                 text-decoration: underline;
                 padding: 5px 0;
                 display: block;
+                &.style2{
+                    color: $textColor;
+                    text-decoration: none;
+                }
             }
         }
     }

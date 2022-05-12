@@ -1,7 +1,8 @@
 import React from 'react'
 import { Buttons } from '..'
+import RatingBar from '../RatingBar';
 import './style.scss';
-export default function ProductItem({url='imgs/8.jpg',name='product title', des='Space for a small product description',cost='1.5', sale='',}) {
+export default function ProductItem({url='imgs/8.jpg',name='product title', des='Space for a small product description',cost='1.5', sale='', stars=''}) {
     return (
         <div className='productItem'>
             <div className='productItem_img'>
@@ -12,6 +13,9 @@ export default function ProductItem({url='imgs/8.jpg',name='product title', des=
                 <h2>{name}</h2>
                 <span>{des}</span>
             </div>
+            {stars && <div className='productItem_rate'>
+                <RatingBar number={stars} color='#151515'/>    
+            </div>}
             <div className='productItem_cost'>
                 <div className='cost'>
                     <span>{cost} USD</span>
